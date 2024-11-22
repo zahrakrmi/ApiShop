@@ -1,0 +1,202 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+main{
+    width: 100%;
+    display: flex;
+    /* border: 2px solid green; */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    >div{
+        width: 300px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.149);
+        border-radius: 30px;
+        background-color: white ;
+        margin: 50px 20px;
+        transition: 1s;
+        &:hover{
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.466);
+        }
+        >img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin: 20px 50px;
+            transition: 2s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        >p{
+            color: black;
+            font-size: 20px;
+            margin: 0 50px;
+        }
+        >h2{
+            color: black;
+            font-size: 15px;
+            margin-left: 200px;
+        }
+        >button{
+            width: 100px;
+            padding: 10px;
+            border: none;
+            color: white;
+            background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+            background-blend-mode: normal, lighten, soft-light;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            margin: 20px 95px;
+            font-family: "Prata", serif;
+        }
+    }
+}
+.mypop{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    transform: 1s;
+    font-family: "Prata", serif;
+    >i{
+        /* margin-bottom: -500px; */
+        font-size: 20px;
+        /* border: 1px solid red; */
+        position: absolute;
+        top: 20px;left: 20px;
+    }
+    >img{
+        width: 400px;
+        /* height: 500px; */
+        object-fit: cover;
+        margin: 100px 100px;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.308);
+        transition: 2s;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.466);
+            &:hover{
+                transform: scale(1.1);
+            }
+    }
+    .myinfo{
+        width: 500px;
+        /* border: 1px solid red; */
+        position: absolute;
+        top: 150px;
+        left: 550px;
+        >h2{
+            font-size: 15px;
+            padding: 10px;
+            &:nth-of-type(4){
+                font-weight: normal;
+            }
+            &:nth-of-type(6){
+                color: green;
+            }
+            &:nth-of-type(7){
+                color: rgb(128, 0, 0);
+                margin-top: -40px;
+                margin-left: 50px;
+            }
+        }
+    }
+}
+.me {
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    bottom: 40px;
+    right: 5px;
+    z-index: 1001;
+    /* border: 1px solid red; */
+
+    >div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: red;
+        &:first-of-type {
+            border-radius: 49% 51% 46% 54% / 74% 77% 23% 26%;
+            background-color: #65425f;
+            animation: anime2 infinite alternate 2s;
+
+        }
+
+        &:last-of-type {
+            background-image: url(../img/zahra.jpg);
+            background-size: cover;
+            border-radius: 49% 51% 46% 54% / 37% 31% 69% 63%;
+            animation: anime1 infinite alternate 2s;
+
+        }
+    }
+
+    &:hover {
+        >a {
+            left: -30px;
+            opacity: 1;
+
+            &:nth-of-type(2) {
+                left: -70px;
+            }
+
+            &:nth-of-type(3) {
+                left: -70px;
+            }
+
+            &:nth-of-type(4) {
+                left: -30px;
+            }
+        }
+    }
+
+    >a {
+        position: absolute;
+        left: 30px;
+        text-decoration: none;
+        font-size: 30px;
+        transition: 1s;
+        color: rgb(0, 0, 0);
+        opacity: 0;
+
+        &:first-of-type {
+            top: 0;
+
+        }
+
+        &:nth-of-type(2) {
+            top: 40px;
+        }
+
+        &:nth-of-type(3) {
+            top: 90px;
+        }
+
+        &:nth-of-type(4) {
+            top: 140px;
+        }
+
+    }
+
+
+}
+
+@keyframes anime1 {
+to {
+    border-radius: 49% 51% 48% 52% / 46% 46% 54% 54%;
+}
+}
+
+@keyframes anime2 {
+to {
+    border-radius: 70% 30% 44% 56% / 46% 34% 66% 54%;
+}
+}
+
+
